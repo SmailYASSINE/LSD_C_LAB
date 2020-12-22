@@ -6,6 +6,7 @@
 float *descente(float A[N][N], float B[N], int n)
 {
   float   *x;
+  float s=0;
 
   /* Here we allocate the result verctor \
   (you're gonna do it yourself in the next exercises)*/
@@ -14,7 +15,12 @@ float *descente(float A[N][N], float B[N], int n)
 
   /******Implement the solution here******/
   /***************************************/
-  
+  x[0]=B[0]/A[0][0];
+	for(int i=1;i<n;i++){
+		for(int j=0;j<=i;j++)
+			s+=A[i][j]*x[j];
+		x[i]=(B[i]-s)/A[i][i];
+	}	
   /****************************************/
 
   return (x);
