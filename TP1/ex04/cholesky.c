@@ -3,13 +3,8 @@
 #include <math.h>
 #define N 10
 
-int main()
-{
-  /* 
-  ** What are you looking for ? \
-  ** go ahead and code the solution by yourself. \
-  ** you can always ask for help on slack.
-  */
+
+ 
 
    float cholesky(float A[N][N],float B[N])
    {
@@ -63,7 +58,7 @@ int main(){
 		}
 
 
-	//implementing c matrix 
+	//implémentation de C :
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n; j++){
 			c[i][j]=0;
@@ -72,7 +67,7 @@ int main(){
 	
 	
 	
-	//the cholesky matrix
+	
 	c[N][N]=cholesky(c, a, 4);
 	//printing  c
 	printf("the c matric \n");
@@ -83,7 +78,7 @@ int main(){
 		printf("\n");
 	}
 	
-	//solve c(Transose)*y=b
+	//La resolution de  c(Transpose)*y=b
 	
 	y[0]=b[0]/c[0][0];
 	for(int i=1;i<n;i++){
